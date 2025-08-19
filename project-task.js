@@ -81,6 +81,7 @@ Step-by-Step:
 3. Use this returned function inside a `map()` call to apply discounts to all products.
 */
 
+
 let discount = 0.90
 
 function applyDiscount(discount) {
@@ -117,3 +118,4 @@ console.log("Filtered products:", filteredProducts(products, inStockProducts));
 console.log("Uppercased names:", productsUpperCase);
 console.log("Discounted products:", products.map(applyDiscount()));
 console.log("Total value in stock:", totalInStockValue);
+console.log("Hello, World");
