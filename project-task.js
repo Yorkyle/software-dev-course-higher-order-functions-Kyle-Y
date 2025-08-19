@@ -44,7 +44,7 @@ Step-by-Step:
 3. Return the filtered result.
 */
 
-function filteredProducts (products,callback) {
+function filteredProducts(products, callback) {
   return products.filter(callback);
 }
 let inStockProducts = (product) => product.inStock;
@@ -61,8 +61,10 @@ Step-by-Step:
 */
 
 const productsUpperCase = products.map((product) => {
-  return {...product, 
-    name: product.name.toUpperCase()}
+  return {
+    ...product,
+    name: product.name.toUpperCase()
+  }
 }
 );
 
@@ -81,10 +83,11 @@ Step-by-Step:
 
 let discount = 0.90
 
-function applyDiscount (discount){
+function applyDiscount(discount) {
   return (discountedPrice) => {
-    return {...discountedPrice, 
-    price: discountedPrice.price * 0.90
+    return {
+      ...discountedPrice,
+      price: discountedPrice.price * 0.90
     }
   }
 }
@@ -102,8 +105,8 @@ Step-by-Step:
 */
 
 const totalInStockValue = products
-.filter (prices => prices.inStock)
-.reduce ((sum, prices) => sum + prices.price, 0);
+  .filter(prices => prices.inStock)
+  .reduce((sum, prices) => sum + prices.price, 0);
 
 
 // ============================================
